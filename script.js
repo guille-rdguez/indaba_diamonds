@@ -35,7 +35,7 @@ const translations = {
     meetBody: "Durante más de cuatro décadas, Guillermo ha conocido cada lado de un diamante: desde el banco del joyero y la rueda de corte hasta ese momento íntimo en que alguien elige un anillo. Nunca te llevará hacia la opción más costosa. Te llevará hacia la correcta.",
     meetQuote: "“No tengo clientes. Hago nuevos amigos.”", talkGuillermo: "Habla directamente con Guillermo",
     earnedEyebrow: "Una formación construida entre continentes", earnedTitle: "Conoce el recorrido<br>de un diamante porque<br><em>lo ha vivido.</em>",
-    credBoston: "Fabricación y reparación de joyería en North Bennet Street School.", credNewYork: "Clasificación de diamantes y estudios especializados con GIA.",
+    dateToday: "HOY", credBoston: "Fabricación y reparación de joyería en North Bennet Street School.", credNewYork: "Clasificación de diamantes y estudios especializados con GIA.",
     credJoburg: "Evaluación, corte y pulido de diamante en bruto en Sudáfrica.", credCanada: "Quince años ayudando a parejas a decidir con información y confianza.",
     chapterApproach: "El método Indaba", approachTitle: "Sin presión.<br>Sin actuaciones.<br><em>Sólo claridad.</em>",
     approachBody: "Natural o de laboratorio. Clásico o totalmente personalizado. Llega con una visión precisa o sólo con una sensación. Guillermo comienza donde tú estés.",

@@ -112,8 +112,9 @@ img, video { display: block; width: 100%; }
 .credential-intro { position: sticky; top: 150px; height: max-content; }
 .credential-intro h2 { font-size: clamp(43px,5vw,76px); }
 .credential-list { border-top: 1px solid rgba(255,255,255,.2); }
-.credential { padding: 33px 0; display: grid; grid-template-columns: 84px 1fr; gap: 30px; border-bottom: 1px solid rgba(255,255,255,.2); }
-.credential > span { color: var(--gold); font: 17px var(--serif); }
+.credential { padding: 38px 0; display: grid; grid-template-columns: 132px 1fr; gap: 34px; border-bottom: 1px solid rgba(255,255,255,.24); }
+.credential > span { color: var(--gold-light); font: 600 25px/1 var(--serif); letter-spacing: .035em; white-space: nowrap; text-shadow: 0 0 24px rgba(221,171,51,.18); }
+.credential > span small { display: block; margin-top: 9px; color: var(--gold); font: 600 10px/1 var(--sans); letter-spacing: .18em; }
 .credential h3 { margin: 0 0 9px; color: var(--gold-light); font: 34px var(--serif); }
 .credential p { margin: 0; color: rgba(255,255,255,.78); line-height: 1.7; font-size: 16px; }
 
@@ -324,7 +325,8 @@ footer > div { grid-column: span 2; align-self: end; padding-top: 25px; border-t
   .meet-copy { padding-top: 30px; }
   .meet-copy h2, .credential-intro h2, .approach h2, .craft h2, .story h2, .purpose h2, .final-cta h2 { font-size: clamp(40px,11vw,54px); line-height: 1.02; }
   .large-copy { margin-top: 35px; }
-  .credential { grid-template-columns: 65px 1fr; }
+  .credential { grid-template-columns: 105px 1fr; gap: 22px; }
+  .credential > span { font-size: 21px; }
   .method-grid, .story-rail { grid-template-columns: 1fr; }
   .method-card, .method-card + .method-card, .story-stop, .story-stop + .story-stop { padding: 25px 0; border-right: 0; border-top: 1px solid var(--line); min-height: 0; }
   .method-card h3, .story-stop h3 { margin-top: 38px; }
