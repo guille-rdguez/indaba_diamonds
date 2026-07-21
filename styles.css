@@ -74,6 +74,12 @@ img, video { display: block; width: 100%; }
 .scroll-cue i { width: 44px; height: 1px; background: white; position: relative; overflow: hidden; }
 .scroll-cue i::after { content:""; position: absolute; inset: 0; background: var(--gold); animation: scrollLine 2s infinite; }
 
+.trust-strip { background: var(--gold-light); color: var(--wine); display: grid; grid-template-columns: repeat(4,1fr); padding: 0 7vw; border-bottom: 1px solid rgba(79,7,31,.2); }
+.trust-strip > div { min-height: 118px; padding: 25px 28px; border-right: 1px solid rgba(79,7,31,.2); display: flex; align-items: center; gap: 18px; }
+.trust-strip > div:first-child { border-left: 1px solid rgba(79,7,31,.2); }
+.trust-strip strong { font: 34px/1 var(--serif); font-weight: 400; white-space: nowrap; }
+.trust-strip span { max-width: 145px; font-size: 11px; font-weight: 500; line-height: 1.45; letter-spacing: .1em; text-transform: uppercase; }
+
 .section { padding: 120px 7vw; }
 .chapter-label { display: flex; gap: 25px; align-items: center; padding-bottom: 24px; border-bottom: 1px solid var(--line); color: var(--wine); font-size: 12px; letter-spacing: .17em; text-transform: uppercase; }
 .chapter-label.light { color: var(--gold-light); border-color: rgba(255,255,255,.18); }
@@ -152,6 +158,10 @@ img, video { display: block; width: 100%; }
 .video-toggle { position: absolute; z-index: 3; width: 52px; height: 52px; border-radius: 50%; border: 1px solid rgba(255,255,255,.6); background: rgba(79,7,31,.45); color: white; display: grid; place-items: center; top: 22px; right: 22px; backdrop-filter: blur(8px); }
 .video-toggle.playing { font-size: 0; }
 .video-toggle.playing::after { content:"Ⅱ"; font-size: 13px; }
+.craft-cta { margin-top: 16px; padding: 35px 38px; background: var(--wine); display: flex; justify-content: space-between; align-items: center; gap: 45px; }
+.craft-cta > div { display: grid; gap: 8px; }
+.craft-cta > div span { color: rgba(255,255,255,.7); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+.craft-cta > div strong { color: white; font: 25px/1.35 var(--serif); font-weight: 400; }
 
 .story { background: var(--ivory); }
 .story-intro { padding: 85px 0 105px; }
@@ -201,6 +211,21 @@ img, video { display: block; width: 100%; }
 .purpose-copy h2 em { color: var(--wine-bright); }
 .purpose-copy > p:not(.eyebrow):not(.purpose-note) { margin: 45px 0 25px; font-size: 17px; line-height: 1.8; color: rgba(26,17,19,.78); }
 .purpose-note { padding-top: 20px; border-top: 1px solid var(--line); font-size: 13px; line-height: 1.65; opacity: .72; }
+
+.faq { background: var(--ivory); }
+.faq-layout { padding-top: 90px; display: grid; grid-template-columns: .85fr 1.15fr; gap: 9vw; }
+.faq-intro { position: sticky; top: 130px; height: max-content; }
+.faq-intro h2 { margin: 0; color: var(--wine); font: clamp(44px,4.8vw,74px)/1 var(--serif); letter-spacing: -.02em; }
+.faq-intro h2 em { color: var(--wine-bright); font-weight: 400; }
+.faq-intro > p:last-child { margin: 35px 0 0; max-width: 460px; font-size: 17px; line-height: 1.75; color: rgba(26,17,19,.74); }
+.faq-list { border-top: 1px solid var(--line); }
+.faq-list details { border-bottom: 1px solid var(--line); }
+.faq-list summary { list-style: none; padding: 26px 0; display: flex; align-items: center; justify-content: space-between; gap: 25px; color: var(--wine); cursor: pointer; }
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary span { font: 25px/1.3 var(--serif); }
+.faq-list summary i { font: 25px var(--serif); font-style: normal; transition: transform .25s; }
+.faq-list details[open] summary i { transform: rotate(45deg); }
+.faq-list details p { margin: 0; padding: 0 55px 28px 0; font-size: 16px; line-height: 1.75; color: rgba(26,17,19,.72); }
 
 .final-cta { min-height: 86vh; background: var(--wine); color: white; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .final-symbol { position: relative; width: 75px; height: 68px; color: var(--gold); margin-bottom: 35px; }
@@ -264,6 +289,8 @@ footer > div { grid-column: span 2; align-self: end; padding-top: 25px; border-t
   .method-card:nth-child(n+3), .story-stop:nth-child(n+3) { border-top: 1px solid var(--line); }
   .diamond-dialogue { gap: 6vw; }
   .archive { grid-template-columns: .8fr 1.2fr; gap: 5vw; }
+  .trust-strip > div { padding: 22px 16px; gap: 12px; }
+  .trust-strip strong { font-size: 27px; }
 }
 
 @media (max-width: 700px) {
@@ -280,6 +307,12 @@ footer > div { grid-column: span 2; align-self: end; padding-top: 25px; border-t
   .circle-cta { width: 105px; height: 105px; flex: 0 0 auto; }
   .circle-cta span { font-size: 10px; }
   .scroll-cue { display: none; }
+  .trust-strip { grid-template-columns: 1fr 1fr; padding: 0 24px; }
+  .trust-strip > div { min-height: 105px; border-right: 0; border-bottom: 1px solid rgba(79,7,31,.2); }
+  .trust-strip > div:nth-child(odd) { border-left: 1px solid rgba(79,7,31,.2); border-right: 1px solid rgba(79,7,31,.2); }
+  .trust-strip > div:nth-child(even) { border-right: 1px solid rgba(79,7,31,.2); }
+  .trust-strip strong { font-size: 25px; }
+  .trust-strip span { font-size: 9px; }
   .section { padding: 80px 24px; }
   .opening-grid { padding-top: 70px; }
   .side-note { max-width: 280px; }
@@ -303,6 +336,8 @@ footer > div { grid-column: span 2; align-self: end; padding-top: 25px; border-t
   .media-card, .media-card.media-tall, .media-card.media-wide { grid-column: auto; grid-row: auto; min-height: 430px; aspect-ratio: auto; }
   .media-card figcaption { align-items: start; flex-direction: column; gap: 5px; }
   .media-card figcaption small { text-align: left; }
+  .craft-cta { padding: 30px 22px; flex-direction: column; align-items: stretch; }
+  .craft-cta .button { width: 100%; }
   .story-intro { padding-bottom: 70px; }
   .archive { margin: 0 -24px 90px; padding: 80px 24px 90px; grid-template-columns: 1fr; gap: 75px; }
   .archive-copy { position: relative; top: auto; }
@@ -317,6 +352,11 @@ footer > div { grid-column: span 2; align-self: end; padding-top: 25px; border-t
   .archive-photo figcaption { grid-template-columns: 25px 1fr; }
   .archive-photo figcaption span { font-size: 17px; }
   .archive-photo figcaption small { font-size: 10px; }
+  .faq-layout { padding-top: 70px; grid-template-columns: 1fr; gap: 60px; }
+  .faq-intro { position: static; }
+  .faq-intro h2 { font-size: clamp(40px,11vw,54px); }
+  .faq-list summary span { font-size: 21px; }
+  .faq-list details p { padding-right: 20px; }
   .purpose { padding: 0; }
   .purpose-image { min-height: 520px; }
   .purpose-copy { padding: 80px 24px; }

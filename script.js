@@ -1,8 +1,29 @@
+const conversionOrder = [
+  ".hero",
+  ".trust-strip",
+  ".meet",
+  ".approach",
+  ".craft",
+  ".diamond-dialogue",
+  ".opening",
+  ".credentials",
+  ".story",
+  ".purpose",
+  ".faq",
+  ".final-cta"
+];
+const main = document.querySelector("main");
+conversionOrder.forEach(selector => {
+  const section = main.querySelector(selector);
+  if (section) main.appendChild(section);
+});
+
 const translations = {
   es: {
     navMeet: "Conoce a Guillermo", navApproach: "El acompañamiento", navStory: "Su historia", navBook: "Agenda una conversación",
-    heroEyebrow: "Una asesoría privada de diamantes", heroLine1: "Esto no se trata de venderte", heroLine2: "un diamante.",
-    heroBody: "Se trata de comprender tu historia y encontrar el diamante que pertenece a ella.", begin: "Comienza la<br>conversación", personally: "Guiado personalmente por Guillermo", scroll: "Desliza para conocerlo",
+    heroEyebrow: "Videollamada gratuita · Personalmente con Guillermo", heroLine1: "Esto no se trata de venderte", heroLine2: "un diamante.",
+    heroBody: "Se trata de comprender tu historia y encontrar el diamante que pertenece a ella.", begin: "Conoce a<br>Guillermo", personally: "Guiado personalmente por Guillermo", scroll: "Desliza para conocerlo",
+    trustYears: "Años en el banco de joyero", trustGia: "Gemólogo graduado", trustBoth: "Natural y de laboratorio", trustRegion: "Orientación personal sin fronteras",
     chapterConversation: "La conversación", openingSide: "Antes de quilates, cortes o certificados, hay algo más importante.", openingQuestion: "¿Para quién estás eligiendo?",
     choiceProposal: "Una propuesta", choiceTogether: "Lo elegimos juntos", choiceMilestone: "Un momento importante", choiceUnsure: "Aún lo estoy descubriendo",
     answerLead: "Bien. Ahí comienza nuestra conversación.", answerProposal: "Cuéntale a Guillermo sobre la persona, el momento y lo que quieres que signifique.",
@@ -30,6 +51,7 @@ const translations = {
     craftBody: "Trae un boceto, una imagen guardada, una pieza heredada o sólo una idea. Juntos, la convertimos en algo completamente tuyo.",
     mediaMaking: "En el banco", mediaMakingSub: "La mano humana detrás de cada detalle", mediaVision: "La visión", mediaVisionSub: "Mírala antes de hacerla realidad",
     mediaDiamond: "El diamante", mediaDiamondSub: "Elegido por más que sus números", mediaOne: "El indicado", mediaOneSub: "Creado para la historia que sólo ustedes pueden contar",
+    craftCtaLabel: "¿Tienes una idea o no sabes por dónde comenzar?", craftCtaTitle: "Trae la historia. Guillermo te ayudará a dar forma al resto.",
     chapterStory: "Una vida entre diamantes", storyTitle: "Algunas carreras se planean.<br><em>Ésta se persiguió.</em>",
     archiveEyebrow: "Los años de aprendizaje · 1985—1986", archiveTitle: "Antes de las credenciales,<br><em>estuvo el banco de trabajo.</em>",
     archiveBody: "A los diecinueve años, Guillermo aprendía el oficio reparación por reparación, herramienta por herramienta y gracias a cada maestro generoso. Estas fotografías conservan el comienzo de una vida marcada por la curiosidad y por quienes estuvieron dispuestos a compartir su conocimiento.",
@@ -45,6 +67,13 @@ const translations = {
     purposeEyebrow: "Una compra con propósito", purposeTitle: "Abrir la puerta<br><em>que alguna vez encontró cerrada.</em>",
     purposeBody: "Parte de las futuras ganancias de Indaba ayudará a equipar una escuela de joyería en México y crear becas para quienes de otra manera no podrían aprender el oficio. Cada anillo ayudará a acercar ese sueño.",
     purposeNote: "El programa y su reporte público de impacto se encuentran actualmente en desarrollo.",
+    chapterFaq: "Antes de conversar", faqEyebrow: "Todas las preguntas son bienvenidas", faqTitle: "No necesitas saber<br><em>nada sobre diamantes.</em>",
+    faqBody: "Precisamente para eso está Guillermo. La primera conversación es para comprender, no para decidir.",
+    faqOneQ: "¿Qué sucede durante la primera conversación?", faqOneA: "Te reúnes directamente con Guillermo por videollamada. Él escucha tu historia, prioridades y preguntas, y después explica los siguientes pasos con claridad. La consulta es gratuita y sin presión.",
+    faqTwoQ: "¿Debo elegir primero entre natural o de laboratorio?", faqTwoA: "No. Indaba trabaja con ambos. Guillermo explicará las diferencias con honestidad y te ayudará a decidir qué opción coincide con tus valores y prioridades.",
+    faqThreeQ: "¿Podemos crear algo completamente personalizado?", faqThreeA: "Sí. Puedes traer un boceto, una referencia, una pieza existente o simplemente una idea. Guillermo puede orientarte en la selección del diamante y en todo el proceso de diseño personalizado.",
+    faqFourQ: "¿Mi diamante estará certificado?", faqFourA: "Sí. La certificación y las características relevantes de tu diamante se explicarán claramente antes de que tomes una decisión.",
+    faqFiveQ: "¿Guillermo puede ayudar a clientes de Canadá y Estados Unidos?", faqFiveA: "Sí. Las consultas están disponibles en inglés o español para clientes de Canadá y Estados Unidos.",
     finalEyebrow: "Gratuita · Personal · Sin presión", finalTitle: "Toda historia de amor comienza<br><em>con una conversación.</em>",
     finalBody: "Tu primera videollamada será directamente con Guillermo, en inglés o español.", bookFree: "Agenda tu conversación gratuita", comingSoon: "Opciones de contacto directo próximamente",
     footerTag: "El diamante correcto. Las razones correctas. El guía correcto.", bookingEyebrow: "Antes de conocernos", bookingStart: "Comencemos con tu historia.",
