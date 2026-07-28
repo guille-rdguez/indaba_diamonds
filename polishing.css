@@ -1,0 +1,70 @@
+.polishing-hero { background: radial-gradient(circle at 80% 43%,rgba(196,143,61,.24),transparent 24%),radial-gradient(circle at 76% 44%,rgba(123,18,55,.5),transparent 39%),linear-gradient(125deg,#0d0507,#310a16 62%,#16090d); }
+.polishing-hero h1 { line-height: .79; }
+.polishing-hero h1 span:last-child { margin-left: 12%; }
+.polish-wheel { position: absolute; width: min(43vw,640px); aspect-ratio: 1; right: -5vw; top: 16%; border: 1px solid rgba(255,234,156,.25); border-radius: 50%; display: grid; place-items: center; animation: wheelTurn 18s linear infinite; }
+.polish-wheel > span { position: absolute; inset: 16%; border: 1px dashed rgba(255,234,156,.32); border-radius: 50%; }
+.polish-wheel > i { position: absolute; inset: 34%; border: 1px solid rgba(255,234,156,.34); border-radius: 50%; }
+.polish-wheel > b { width: 13px; height: 13px; border-radius: 50%; background: var(--gold-light); box-shadow: 0 0 30px rgba(255,234,156,.7); }
+.polish-wheel small { position: absolute; right: 8%; top: 48%; color: var(--gold-light); font-size: 16px; letter-spacing: .16em; }
+
+.polishing-guide { padding: 27px 7vw; border-bottom: 1px solid rgba(79,7,31,.18); display: grid; grid-template-columns: 1fr repeat(4,auto); gap: 32px; align-items: center; background: var(--paper); color: var(--wine); }
+.polishing-guide > span { color: var(--gold-deep); font-size: 16px; letter-spacing: .12em; text-transform: uppercase; }
+.polishing-guide a { display: flex; gap: 10px; align-items: center; font-size: 16px; }
+.polishing-guide a i { color: var(--gold-deep); font: 16px var(--serif); font-style: normal; }
+.polishing-guide a b { font-weight: 400; }
+.polishing-video { max-width: 560px; }
+
+.process-compare { margin: 60px 0 35px; display: grid; grid-template-columns: 1fr 1fr; border: 1px solid rgba(79,7,31,.2); }
+.process-compare > div { min-height: 220px; padding: 28px; display: flex; flex-direction: column; }
+.process-compare > div + div { border-left: 1px solid rgba(79,7,31,.2); background: rgba(221,171,51,.08); }
+.process-compare span { color: var(--gold-deep); font-size: 16px; letter-spacing: .1em; text-transform: uppercase; }
+.process-compare b { margin-top: auto; color: var(--wine); font: 27px/1.2 var(--serif); font-weight: 400; }
+.process-compare p { margin: 12px 0 0; color: rgba(26,17,19,.66); font-size: 16px; line-height: 1.55; }
+.planning-balance { margin-top: 60px; padding: 30px; border: 1px solid rgba(79,7,31,.2); display: flex; justify-content: space-between; align-items: center; gap: 20px; color: var(--wine); font: 25px var(--serif); }
+.planning-balance i { color: var(--gold); font-style: normal; }
+.scaife-diagram { position: relative; height: 340px; margin: 60px 0; border: 1px solid rgba(79,7,31,.18); display: grid; place-items: center; overflow: hidden; }
+.scaife-wheel { width: 230px; height: 230px; border: 1px solid rgba(79,7,31,.35); border-radius: 50%; display: grid; place-items: center; animation: wheelTurn 12s linear infinite; }
+.scaife-wheel::before, .scaife-wheel::after { content: ""; position: absolute; width: 170px; height: 170px; border: 1px dashed rgba(79,7,31,.3); border-radius: 50%; }
+.scaife-wheel::after { width: 70px; height: 70px; border-style: solid; }
+.scaife-wheel i { width: 9px; height: 9px; border-radius: 50%; background: var(--gold); }
+.scaife-stone { position: absolute; margin-left: 230px; color: var(--wine); font-size: 45px; }
+.scaife-diagram b { position: absolute; left: 22px; bottom: 18px; color: var(--gold-deep); font-size: 16px; font-weight: 500; letter-spacing: .12em; }
+.chapter-emphasis { margin-top: 55px !important; padding: 30px 0 0; border-top: 1px solid rgba(79,7,31,.2); color: var(--wine) !important; font: 27px/1.5 var(--serif) !important; }
+.stage-list { margin-top: 55px; border-top: 1px solid rgba(79,7,31,.2); }
+.stage-list > section { padding: 34px 0; border-bottom: 1px solid rgba(79,7,31,.2); display: grid; grid-template-columns: 75px 1fr; }
+.stage-list > section > span { color: var(--gold-deep); font: 18px var(--serif); }
+.stage-list h3 { margin: 0 0 18px; color: var(--wine); font: 31px/1.2 var(--serif); font-weight: 400; }
+.stage-list p { margin: 0; color: rgba(26,17,19,.72); font-size: 16px; line-height: 1.75; }
+.stage-list p + p { margin-top: 15px; }
+.story-chapter > p + p { margin-top: 28px !important; }
+.light-effects { margin: 60px 0 42px; display: grid; grid-template-columns: repeat(3,1fr); border: 1px solid rgba(79,7,31,.2); }
+.light-effects > div { min-height: 230px; padding: 25px; display: flex; flex-direction: column; }
+.light-effects > div + div { border-left: 1px solid rgba(79,7,31,.2); }
+.light-effects span { color: var(--gold-deep); font: 17px var(--serif); }
+.light-effects b { margin-top: auto; color: var(--wine); font: 28px var(--serif); font-weight: 400; }
+.light-effects p { margin: 10px 0 0; color: rgba(26,17,19,.66); font-size: 16px; line-height: 1.55; }
+.final-thought { margin-top: 60px !important; padding: 35px 0 0; border-top: 1px solid rgba(79,7,31,.2); color: var(--wine) !important; font: 29px/1.5 var(--serif) !important; }
+.polishing-closing { background: #2c0a15; }
+
+@keyframes wheelTurn { to { transform: rotate(360deg); } }
+
+@media (max-width: 980px) {
+  .polishing-guide { grid-template-columns: 1fr 1fr; }
+  .polishing-guide > span { grid-column: 1 / -1; }
+}
+
+@media (max-width: 700px) {
+  .polishing-hero h1 { font-size: clamp(61px,19vw,90px); }
+  .polishing-hero h1 span:last-child { margin-left: 2%; }
+  .polish-wheel { width: 95vw; right: -55vw; top: 27%; }
+  .polishing-guide { padding: 24px; display: flex; overflow-x: auto; scrollbar-width: none; }
+  .polishing-guide::-webkit-scrollbar { display: none; }
+  .polishing-guide > span { display: none; }
+  .polishing-guide a { flex: 0 0 auto; padding: 10px 15px; border: 1px solid rgba(79,7,31,.2); border-radius: 100px; }
+  .process-compare, .light-effects { grid-template-columns: 1fr; }
+  .process-compare > div + div, .light-effects > div + div { border-top: 1px solid rgba(79,7,31,.2); border-left: 0; }
+  .planning-balance { align-items: flex-start; flex-direction: column; }
+  .planning-balance i { transform: rotate(90deg); }
+  .scaife-stone { margin-left: 185px; }
+  .stage-list > section { grid-template-columns: 52px 1fr; }
+}
