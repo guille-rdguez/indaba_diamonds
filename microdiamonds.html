@@ -4,14 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Discover how microdiamonds are inspected, matched and handled with extraordinary precision before they become part of a finished jewel." />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="author" content="Guillermo González" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="The Indaba Journal" />
+    <meta property="og:title" content="Microdiamonds: Tiny Stones That Require Extraordinary Precision" />
+    <meta property="og:description" content="See how melee diamonds are inspected, matched and handled before pavé, micro-pavé, channel and halo setting." />
+    <meta property="og:image" content="assets/images/journal/microdiamonds-poster.webp" />
+    <meta property="og:image:alt" content="A specialist sorting microdiamonds with a magnifying visor and precision tweezers" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#18070d" />
     <link rel="icon" type="image/png" href="assets/branding/favicon.png" />
     <title>Microdiamonds: Tiny Stones, Extraordinary Precision — The Indaba Journal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Italiana&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="journal.css" />
-    <link rel="stylesheet" href="microdiamonds.css" />
+    <link rel="preload" href="assets/fonts/italiana-latin-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="microdiamonds.bundle.min.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Microdiamonds: Tiny Stones That Require Extraordinary Precision",
+        "description": "How microdiamonds are inspected, sorted, matched and handled before becoming part of a finished jewel.",
+        "datePublished": "2026-07-28",
+        "dateModified": "2026-07-28",
+        "image": "assets/images/journal/microdiamonds-poster.webp",
+        "author": { "@type": "Person", "name": "Guillermo González" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Indaba Diamonds",
+          "logo": { "@type": "ImageObject", "url": "assets/branding/logo-wine.webp" }
+        },
+        "video": {
+          "@type": "VideoObject",
+          "name": "Sorting and matching microdiamonds",
+          "description": "A specialist inspects and sorts melee diamonds using magnification and precision tweezers.",
+          "thumbnailUrl": "assets/images/journal/microdiamonds-poster.webp",
+          "uploadDate": "2026-07-28",
+          "duration": "PT1M16S",
+          "contentUrl": "micro.mp4"
+        }
+      }
+    </script>
+    <script src="icons.js" defer></script>
     <script src="microdiamonds.js" defer></script>
   </head>
   <body id="top" class="microdiamonds-page">
@@ -20,13 +53,13 @@
 
     <header class="journal-header">
       <a class="journal-wordmark brand-logo brand-logo-switch" href="index.html" aria-label="Indaba Diamonds home">
-        <img class="brand-logo-white" src="assets/branding/logo-white.png" alt="" />
-        <img class="brand-logo-wine" src="assets/branding/logo-wine.png" alt="" aria-hidden="true" />
+        <img class="brand-logo-white" src="assets/branding/logo-white.webp" alt="" />
+        <img class="brand-logo-wine" src="assets/branding/logo-wine.webp" alt="" aria-hidden="true" />
       </a>
       <a class="journal-name" href="journal.html"><span>THE INDABA</span><strong>JOURNAL</strong></a>
       <div class="journal-actions">
-        <button class="journal-language" aria-label="Change language"><span class="active">EN</span><span>ES</span></button>
-        <a class="back-home" href="journal.html"><span data-copy="backHome">All stories</span><i>↗</i></a>
+        <button class="journal-language" title="Change language"><span class="active">EN</span><span>ES</span></button>
+        <a class="back-home" href="journal.html"><span data-copy="backHome">All stories</span><i data-lucide="arrow-up-right"></i></a>
       </div>
     </header>
 
@@ -46,7 +79,7 @@
             <p class="reveal" data-copy="heroDeck">Inside the exacting work of inspecting, matching and handling diamonds small enough to disappear at a fingertip.</p>
             <a class="watch-cue reveal" href="#story">
               <span data-copy="watchStory">Watch the story</span>
-              <i>↓</i>
+              <i data-lucide="arrow-down"></i>
             </a>
           </div>
           <div class="micro-field" aria-hidden="true">
@@ -66,11 +99,11 @@
         <section class="article-story" id="story">
           <aside class="video-column">
             <div class="video-frame micro-video">
-              <video id="journal-video" poster="assets/images/journal/microdiamonds-poster.jpg" preload="metadata" playsinline>
+              <video id="journal-video" poster="assets/images/journal/microdiamonds-poster.webp" preload="none" playsinline>
                 <source src="micro.mp4" type="video/mp4" />
               </video>
               <button class="video-play" aria-label="Play video">
-                <span>▶</span>
+                <span><i data-lucide="play"></i></span>
                 <b data-copy="playFilm">Play film</b>
               </button>
               <div class="video-caption">
@@ -78,10 +111,10 @@
                 <span>INDABA / 04</span>
               </div>
               <div class="video-controls">
-                <button class="control-play" aria-label="Play video">▶</button>
+                <button class="control-play" aria-label="Play video"><i data-lucide="play"></i></button>
                 <div class="video-track" aria-hidden="true"><i></i></div>
                 <time>00:00 / 01:16</time>
-                <button class="control-sound" aria-label="Mute video">Sound</button>
+                <button class="control-sound" aria-label="Mute video"><i data-lucide="volume-2"></i></button>
               </div>
             </div>
           </aside>
@@ -216,7 +249,7 @@
           <h2 data-copy="closingTitle">Precision is most visible<br /><em>in the smallest details.</em></h2>
           <div>
             <p data-copy="closingBody">A seamless field of light begins one stone at a time—with a trained eye and a steady hand.</p>
-            <a href="index.html#meet"><span data-copy="meetGuillermo">Meet Guillermo</span><i>→</i></a>
+            <a href="index.html#meet"><span data-copy="meetGuillermo">Meet Guillermo</span><i data-lucide="arrow-right"></i></a>
           </div>
         </section>
       </article>
@@ -224,10 +257,10 @@
 
     <footer class="journal-footer">
       <a class="journal-wordmark brand-logo brand-logo-dark" href="index.html" aria-label="Indaba Diamonds home">
-        <img src="assets/branding/logo-white.png" alt="" />
+        <img src="assets/branding/logo-white.webp" alt="" />
       </a>
       <p class="journal-footer-motto"><span>Every love story begins with a conversation.</span><small>THE INDABA JOURNAL · ISSUE 04</small></p>
-      <a href="journal.html" data-copy="allStories">All stories →</a>
+      <a href="journal.html"><span data-copy="allStories">All stories</span><i data-lucide="arrow-right"></i></a>
     </footer>
   </body>
 </html>

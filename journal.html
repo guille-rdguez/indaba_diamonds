@@ -4,13 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="The Indaba Journal: short films and clear guidance for seeing diamonds with a more informed eye." />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="author" content="Indaba Diamonds" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Indaba Diamonds" />
+    <meta property="og:title" content="The Indaba Journal — Diamond Knowledge and Craft" />
+    <meta property="og:description" content="Short films and expert explanations about diamond cut, inclusions, polishing and jewelry craftsmanship." />
+    <meta property="og:image" content="assets/images/journal/microdiamonds-poster.webp" />
+    <meta property="og:image:alt" content="A specialist examining microdiamonds with precision tools" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#18070d" />
     <link rel="icon" type="image/png" href="assets/branding/favicon.png" />
     <title>The Indaba Journal — Stories worth looking closer at</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Italiana&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="journal-index.css" />
+    <link rel="preload" href="assets/fonts/italiana-latin-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="journal-index.min.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "The Indaba Journal",
+        "description": "Diamond education, short films and field notes from Indaba Diamonds.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Indaba Diamonds",
+          "logo": { "@type": "ImageObject", "url": "assets/branding/logo-wine.webp" }
+        }
+      }
+    </script>
+    <script src="icons.js" defer></script>
     <script src="journal-index.js" defer></script>
   </head>
   <body id="top">
@@ -18,13 +39,13 @@
 
     <header class="index-header">
       <a class="index-wordmark brand-logo brand-logo-switch" href="index.html" aria-label="Indaba Diamonds home">
-        <img class="brand-logo-white" src="assets/branding/logo-white.png" alt="" />
-        <img class="brand-logo-wine" src="assets/branding/logo-wine.png" alt="" aria-hidden="true" />
+        <img class="brand-logo-white" src="assets/branding/logo-white.webp" alt="" />
+        <img class="brand-logo-wine" src="assets/branding/logo-wine.webp" alt="" aria-hidden="true" />
       </a>
       <span class="index-name">THE INDABA <strong>JOURNAL</strong></span>
       <div class="index-actions">
-        <button class="index-language" aria-label="Change language"><span class="active">EN</span><span>ES</span></button>
-        <a href="index.html"><span data-copy="backHome">Back home</span><i>↗</i></a>
+        <button class="index-language" title="Change language"><span class="active">EN</span><span>ES</span></button>
+        <a href="index.html"><span data-copy="backHome">Back home</span><i data-lucide="arrow-up-right"></i></a>
       </div>
     </header>
 
@@ -57,57 +78,57 @@
         <div class="stories-grid">
           <a class="story-card reveal" href="microdiamonds.html" data-category="craft">
             <span class="story-card-media">
-              <img src="assets/images/journal/microdiamonds-poster.jpg" alt="A specialist sorting microdiamonds with a magnifying visor and precision tweezers" />
+              <img src="assets/images/journal/microdiamonds-poster.webp" alt="A specialist sorting microdiamonds with a magnifying visor and precision tweezers" loading="lazy" decoding="async" width="1200" height="2152" />
               <span class="story-card-time">01:16</span>
-              <span class="story-card-play" aria-hidden="true">▶</span>
+              <span class="story-card-play" aria-hidden="true"><i data-lucide="play"></i></span>
             </span>
             <span class="story-card-body">
               <span class="story-meta"><b data-copy="craft">Craft &amp; process</b><i>ISSUE 04</i></span>
               <strong data-copy="microTitle">Microdiamonds:<br />Tiny Stones That Require Extraordinary Precision</strong>
               <span data-copy="microDeck">See how tiny diamonds are inspected, matched and handled by hand before becoming a seamless field of light.</span>
-              <em><span data-copy="openStory">Open story</span><i>↗</i></em>
+              <em><span data-copy="openStory">Open story</span><i data-lucide="arrow-up-right"></i></em>
             </span>
           </a>
 
           <a class="story-card reveal" href="diamond-polishing.html" data-category="craft">
             <span class="story-card-media">
-              <img src="assets/images/journal/polishing-poster.jpg" alt="A ring being polished with a rotating wheel" />
+              <img src="assets/images/journal/polishing-poster.webp" alt="A ring being polished with a rotating wheel" loading="lazy" decoding="async" width="1200" height="2152" />
               <span class="story-card-time">01:34</span>
-              <span class="story-card-play" aria-hidden="true">▶</span>
+              <span class="story-card-play" aria-hidden="true"><i data-lucide="play"></i></span>
             </span>
             <span class="story-card-body">
               <span class="story-meta"><b data-copy="craft">Craft & process</b><i>ISSUE 03</i></span>
               <strong data-copy="polishingTitle">How a Diamond Is Polished:<br />The Process Behind Its Brilliance</strong>
               <span data-copy="polishingDeck">From rough planning to the final finish, discover the precision that allows a diamond and its setting to reflect light beautifully.</span>
-              <em><span data-copy="openStory">Open story</span><i>↗</i></em>
+              <em><span data-copy="openStory">Open story</span><i data-lucide="arrow-up-right"></i></em>
             </span>
           </a>
 
           <a class="story-card reveal" href="diamond-inclusions.html" data-category="knowledge">
             <span class="story-card-media">
-              <img src="assets/images/journal/inclusions-diamond-poster.jpg" alt="Diamond examined under gemological magnification" />
+              <img src="assets/images/journal/inclusions-diamond-poster.webp" alt="Diamond examined under gemological magnification" loading="lazy" decoding="async" width="1200" height="2133" />
               <span class="story-card-time">01:39</span>
-              <span class="story-card-play" aria-hidden="true">▶</span>
+              <span class="story-card-play" aria-hidden="true"><i data-lucide="play"></i></span>
             </span>
             <span class="story-card-body">
               <span class="story-meta"><b data-copy="knowledge">Diamond knowledge</b><i>ISSUE 02</i></span>
               <strong data-copy="inclusionsTitle">Diamond Inclusions:<br />The Natural Story Inside Every Stone</strong>
               <span data-copy="inclusionsDeck">Look beyond the sparkle and discover the unique internal map that makes every natural diamond its own.</span>
-              <em><span data-copy="openStory">Open story</span><i>↗</i></em>
+              <em><span data-copy="openStory">Open story</span><i data-lucide="arrow-up-right"></i></em>
             </span>
           </a>
 
           <a class="story-card reveal" href="hearts-and-arrows.html" data-category="precision">
             <span class="story-card-media">
-              <img src="assets/images/journal/hearts-and-arrows-poster.jpg" alt="Guillermo inspecting a diamond" />
+              <img src="assets/images/journal/hearts-and-arrows-poster.webp" alt="Guillermo inspecting a diamond" loading="lazy" decoding="async" width="1104" height="2544" />
               <span class="story-card-time">00:41</span>
-              <span class="story-card-play" aria-hidden="true">▶</span>
+              <span class="story-card-play" aria-hidden="true"><i data-lucide="play"></i></span>
             </span>
             <span class="story-card-body">
               <span class="story-meta"><b data-copy="precision">Cut & precision</b><i>ISSUE 01</i></span>
               <strong>Hearts &amp; Arrows</strong>
               <span data-copy="heartsDeck">The hidden geometry that reveals an exceptional level of cut, proportion and optical symmetry.</span>
-              <em><span data-copy="openStory">Open story</span><i>↗</i></em>
+              <em><span data-copy="openStory">Open story</span><i data-lucide="arrow-up-right"></i></em>
             </span>
           </a>
         </div>
@@ -116,14 +137,14 @@
       <section class="index-next">
         <span data-copy="nextLabel">The collection is growing</span>
         <p data-copy="nextBody">New films and field notes will be added one story at a time.</p>
-        <a href="index.html#meet"><span data-copy="ask">Ask Guillermo a question</span><i>→</i></a>
+        <a href="index.html#meet"><span data-copy="ask">Ask Guillermo a question</span><i data-lucide="arrow-right"></i></a>
       </section>
     </main>
 
     <footer class="index-footer">
       <span>© <span id="year"></span> INDABA DIAMONDS</span>
       <span class="company-motto">Every love story begins with a conversation.</span>
-      <a href="#top" data-copy="backTop">Back to top ↑</a>
+      <a href="#top"><span data-copy="backTop">Back to top</span><i data-lucide="arrow-up"></i></a>
     </footer>
   </body>
 </html>

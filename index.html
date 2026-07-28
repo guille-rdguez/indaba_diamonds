@@ -4,13 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="A personal diamond consultation with gemologist and jeweler Guillermo González. Custom engagement rings, natural and lab-grown diamonds in Canada and the United States." />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="author" content="Indaba Diamonds" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Indaba Diamonds" />
+    <meta property="og:title" content="Indaba Diamonds — Personal Diamond Guidance" />
+    <meta property="og:description" content="Personal guidance from gemologist and jeweler Guillermo González for natural and lab-grown diamonds and custom engagement rings." />
+    <meta property="og:image" content="assets/images/diamond-editorial.webp" />
+    <meta property="og:image:alt" content="An emerald-cut diamond held in jeweler's tweezers" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Indaba Diamonds — Personal Diamond Guidance" />
+    <meta name="twitter:description" content="Every love story begins with a conversation. Meet personally with gemologist and jeweler Guillermo González." />
+    <meta name="twitter:image" content="assets/images/diamond-editorial.webp" />
     <meta name="theme-color" content="#4f071f" />
     <link rel="icon" type="image/png" href="assets/branding/favicon.png" />
     <title>Indaba Diamonds — Every love story begins with a conversation</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Italiana&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" href="assets/images/diamond-editorial.webp" as="image" type="image/webp" fetchpriority="high" />
+    <link rel="preload" href="assets/fonts/italiana-latin-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="styles.min.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Indaba Diamonds",
+        "description": "Personal diamond guidance and custom jewelry design with gemologist and jeweler Guillermo González.",
+        "slogan": "Every love story begins with a conversation",
+        "logo": "assets/branding/logo-wine.webp",
+        "image": "assets/images/diamond-editorial.webp",
+        "areaServed": [
+          { "@type": "Country", "name": "Canada" },
+          { "@type": "Country", "name": "United States" }
+        ],
+        "founder": {
+          "@type": "Person",
+          "name": "Guillermo González",
+          "jobTitle": "Gemologist, jeweler and diamond specialist",
+          "knowsAbout": ["Natural diamonds", "Lab-grown diamonds", "Custom jewelry", "Diamond cutting and polishing"]
+        }
+      }
+    </script>
+    <script src="icons.js" defer></script>
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -19,8 +52,8 @@
 
     <header class="site-header" id="top">
       <a class="wordmark brand-logo brand-logo-switch" href="#top" aria-label="Indaba Diamonds home">
-        <img class="brand-logo-white" src="assets/branding/logo-white.png" alt="" />
-        <img class="brand-logo-wine" src="assets/branding/logo-wine.png" alt="" aria-hidden="true" />
+        <img class="brand-logo-white" src="assets/branding/logo-white.webp" alt="" />
+        <img class="brand-logo-wine" src="assets/branding/logo-wine.webp" alt="" aria-hidden="true" />
       </a>
       <nav class="desktop-nav" aria-label="Main navigation">
         <a href="#meet" data-i18n="navMeet">Meet Guillermo</a>
@@ -29,7 +62,7 @@
         <a href="journal.html" data-i18n="navJournal">Journal</a>
       </nav>
       <div class="header-actions">
-        <button class="language-toggle" aria-label="Cambiar idioma"><span class="active">EN</span><span>ES</span></button>
+        <button class="language-toggle" title="Change language"><span class="active">EN</span><span>ES</span></button>
         <button class="text-button open-booking" data-i18n="navBook">Book a conversation</button>
         <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
       </div>
@@ -55,9 +88,9 @@
           </h1>
           <div class="hero-bottom reveal">
             <p data-i18n="heroBody">It's about understanding your story—and finding the one that belongs in it.</p>
-            <button class="circle-cta open-booking" aria-label="Begin the conversation">
+            <button class="circle-cta open-booking" aria-label="Meet Guillermo — begin the conversation">
               <span data-i18n="begin">Meet<br />Guillermo</span>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+              <i data-lucide="arrow-right"></i>
             </button>
           </div>
         </div>
@@ -94,7 +127,7 @@
         <div class="chapter-label light"><span>01</span><span data-i18n="chapterGuide">Your guide</span></div>
         <div class="meet-layout">
           <div class="portrait-wrap reveal">
-            <img src="guillermo_equipo.jpeg" alt="Guillermo González visiting a jewelry workshop" loading="lazy" />
+            <img src="guillermo_equipo.webp" alt="Guillermo González visiting a jewelry workshop" loading="lazy" decoding="async" width="900" height="1200" />
             <div class="portrait-caption"><span>Guillermo González</span><small data-i18n="portraitRole">Gemologist · Jeweler · Diamond specialist</small></div>
           </div>
           <div class="meet-copy">
@@ -102,7 +135,7 @@
             <h2 class="reveal" data-i18n="meetTitle">Expertise is knowing diamonds.<br /><em>Wisdom is knowing people.</em></h2>
             <p class="large-copy reveal" data-i18n="meetBody">For more than four decades, Guillermo has learned every side of a diamond—from the jeweler's bench and cutting wheel to the quiet moment when someone chooses a ring. He will never guide you toward the most expensive option. He will guide you toward the right one.</p>
             <blockquote class="reveal" data-i18n="meetQuote">“I don't have clients. I make new friends.”</blockquote>
-            <button class="line-link open-booking reveal"><span data-i18n="talkGuillermo">Talk directly with Guillermo</span><i>↗</i></button>
+            <button class="line-link open-booking reveal"><span data-i18n="talkGuillermo">Talk directly with Guillermo</span><i data-lucide="arrow-up-right"></i></button>
           </div>
         </div>
       </section>
@@ -155,28 +188,28 @@
         </div>
         <div class="media-story">
           <figure class="media-card media-tall reveal">
-            <video src="proceso.mp4" muted loop playsinline preload="metadata"></video>
-            <button class="video-toggle" aria-label="Play process video">▶</button>
+            <video src="proceso.mp4" poster="assets/images/journal/proceso-poster.webp" muted loop playsinline preload="none"></video>
+            <button class="video-toggle" aria-label="Play process video"><i data-lucide="play"></i></button>
             <figcaption><span data-i18n="mediaMaking">At the bench</span><small data-i18n="mediaMakingSub">The human hand behind every detail</small></figcaption>
           </figure>
           <figure class="media-card reveal">
-            <video src="video_render.mp4" muted loop playsinline preload="metadata"></video>
-            <button class="video-toggle" aria-label="Play ring render video">▶</button>
+            <video src="video_render.mp4" poster="assets/images/journal/render-poster.webp" muted loop playsinline preload="none"></video>
+            <button class="video-toggle" aria-label="Play ring render video"><i data-lucide="play"></i></button>
             <figcaption><span data-i18n="mediaVision">The vision</span><small data-i18n="mediaVisionSub">See it before it becomes real</small></figcaption>
           </figure>
           <figure class="media-card reveal">
-            <img src="anillo.jpeg" alt="Radiant-cut diamond engagement ring" loading="lazy" />
+            <img src="anillo.webp" alt="Radiant-cut diamond engagement ring" loading="lazy" decoding="async" width="1536" height="809" />
             <figcaption><span data-i18n="mediaDiamond">The diamond</span><small data-i18n="mediaDiamondSub">Chosen for more than its numbers</small></figcaption>
           </figure>
           <figure class="media-card media-wide reveal">
-            <video src="viedo_anillos.mp4" muted loop playsinline preload="metadata"></video>
-            <button class="video-toggle" aria-label="Play finished ring video">▶</button>
+            <video src="viedo_anillos.mp4" poster="assets/images/journal/anillos-poster.webp" muted loop playsinline preload="none"></video>
+            <button class="video-toggle" aria-label="Play finished ring video"><i data-lucide="play"></i></button>
             <figcaption><span data-i18n="mediaOne">The one</span><small data-i18n="mediaOneSub">Made for the story only you can tell</small></figcaption>
           </figure>
         </div>
         <div class="craft-cta reveal">
           <div><span data-i18n="craftCtaLabel">Have an idea—or no idea where to begin?</span><strong data-i18n="craftCtaTitle">Bring the story. Guillermo will help shape the rest.</strong></div>
-          <button class="button button-gold open-booking"><span data-i18n="bookFree">Book your complimentary conversation</span><i>↗</i></button>
+          <button class="button button-gold open-booking"><span data-i18n="bookFree">Book your complimentary conversation</span><i data-lucide="arrow-up-right"></i></button>
         </div>
       </section>
 
@@ -196,19 +229,19 @@
           </aside>
           <div class="archive-gallery">
             <figure class="archive-photo archive-landscape archive-one reveal">
-              <div class="photo-frame"><img src="assets/images/history/guillermo-van-dell-bench-1985.png" alt="Guillermo working at a jeweler's bench at age nineteen in 1985" loading="lazy" /></div>
+              <div class="photo-frame"><img src="assets/images/history/guillermo-van-dell-bench-1985.webp" alt="Guillermo working at a jeweler's bench at age nineteen in 1985" loading="lazy" decoding="async" width="948" height="650" /></div>
               <figcaption><b>01</b><p><span data-i18n="archivePhoto1">At the bench, age 19</span><small data-i18n="archivePhoto1Sub">Van Dell Jewellers · Swampscott, Massachusetts · 1985</small></p></figcaption>
             </figure>
             <figure class="archive-photo archive-portrait archive-two reveal">
-              <div class="photo-frame"><img src="assets/images/history/guillermo-joe-calnan-1986.png" alt="Guillermo with his teacher Joseph Calnan at North Bennet Street School in 1986" loading="lazy" /></div>
+              <div class="photo-frame"><img src="assets/images/history/guillermo-joe-calnan-1986.webp" alt="Guillermo with his teacher Joseph Calnan at North Bennet Street School in 1986" loading="lazy" decoding="async" width="613" height="894" /></div>
               <figcaption><b>02</b><p><span data-i18n="archivePhoto2">Learning beside Joe B. Calnan</span><small data-i18n="archivePhoto2Sub">North Bennet Street School · Boston · 1986</small></p></figcaption>
             </figure>
             <figure class="archive-photo archive-portrait archive-three reveal">
-              <div class="photo-frame"><img src="assets/images/history/north-bennet-masters-1986.png" alt="Steven Dame, Guillermo González and Joseph Calnan at North Bennet Street School" loading="lazy" /></div>
+              <div class="photo-frame"><img src="assets/images/history/north-bennet-masters-1986.webp" alt="Steven Dame, Guillermo González and Joseph Calnan at North Bennet Street School" loading="lazy" decoding="async" width="614" height="893" /></div>
               <figcaption><b>03</b><p><span data-i18n="archivePhoto3">With the masters who shared their craft</span><small data-i18n="archivePhoto3Sub">Steven Dame · Guillermo González · Joseph B. Calnan</small></p></figcaption>
             </figure>
             <figure class="archive-photo archive-landscape archive-four reveal">
-              <div class="photo-frame"><img src="assets/images/history/guillermo-polishing-1985.png" alt="Guillermo polishing jewelry at Van Dell Jewellers in 1985" loading="lazy" /></div>
+              <div class="photo-frame"><img src="assets/images/history/guillermo-polishing-1985.webp" alt="Guillermo polishing jewelry at Van Dell Jewellers in 1985" loading="lazy" decoding="async" width="889" height="606" /></div>
               <figcaption><b>04</b><p><span data-i18n="archivePhoto4">Learning through the work</span><small data-i18n="archivePhoto4Sub">Van Dell Jewellers · Swampscott, Massachusetts · 1985</small></p></figcaption>
             </figure>
           </div>
@@ -222,7 +255,7 @@
       </section>
 
       <section class="purpose section">
-        <div class="purpose-image reveal"><img src="guillermo_equipo.jpeg" alt="Guillermo with members of a jewelry workshop in Mexico" loading="lazy" /></div>
+        <div class="purpose-image reveal"><img src="guillermo_equipo.webp" alt="Guillermo with members of a jewelry workshop in Mexico" loading="lazy" decoding="async" width="900" height="1200" /></div>
         <div class="purpose-copy">
           <p class="eyebrow reveal" data-i18n="purposeEyebrow">A purchase with a purpose</p>
           <h2 class="reveal" data-i18n="purposeTitle">Opening the door<br /><em>he once found closed.</em></h2>
@@ -269,28 +302,28 @@
         <p class="eyebrow reveal" data-i18n="finalEyebrow">Complimentary · Personal · No pressure</p>
         <h2 class="reveal" data-i18n="finalTitle">Every love story begins<br /><em>with a conversation.</em></h2>
         <p class="reveal" data-i18n="finalBody">Your first video consultation is directly with Guillermo, in English or Spanish.</p>
-        <button class="button button-gold open-booking reveal"><span data-i18n="bookFree">Book your complimentary conversation</span><i>↗</i></button>
+        <button class="button button-gold open-booking reveal"><span data-i18n="bookFree">Book your complimentary conversation</span><i data-lucide="arrow-up-right"></i></button>
         <div class="contact-options reveal"><span data-i18n="comingSoon">Direct contact options coming soon</span><span>Toronto · Canada & United States</span></div>
       </section>
     </main>
 
     <footer>
       <a class="wordmark footer-wordmark brand-logo brand-logo-dark" href="#top" aria-label="Indaba Diamonds home">
-        <img src="assets/branding/logo-white.png" alt="" />
+        <img src="assets/branding/logo-white.webp" alt="" />
       </a>
       <p data-i18n="footerTag">Every love story begins with a conversation.</p>
       <div><span>© <span id="year"></span> Indaba Diamonds</span><button class="language-toggle footer-language"><span class="active">EN</span><span>ES</span></button></div>
     </footer>
 
     <dialog class="booking-dialog" aria-labelledby="booking-title">
-      <button class="dialog-close" aria-label="Close">×</button>
+      <button class="dialog-close" aria-label="Close"><i data-lucide="x"></i></button>
       <div class="booking-progress"><i></i></div>
       <div class="booking-step active" data-step="1">
         <span class="step-count">01 / 03</span>
         <p class="eyebrow" data-i18n="bookingEyebrow">Before we meet</p>
         <h2 id="booking-title" data-i18n="bookingStart">Let's start with your story.</h2>
         <p data-i18n="bookingStartBody">A few thoughtful questions will help Guillermo make your first conversation more useful.</p>
-        <button class="button button-wine booking-next" data-next="2"><span data-i18n="continue">Continue</span><i>→</i></button>
+        <button class="button button-wine booking-next" data-next="2"><span data-i18n="continue">Continue</span><i data-lucide="arrow-right"></i></button>
       </div>
       <div class="booking-step" data-step="2">
         <span class="step-count">02 / 03</span>
@@ -301,7 +334,7 @@
           <button data-value="Diamond guidance" data-i18n="bookingGuidance">Guidance on a diamond</button>
           <button data-value="Something else" data-i18n="bookingOther">Something else</button>
         </div>
-        <button class="button button-wine booking-next" data-next="3" disabled><span data-i18n="continue">Continue</span><i>→</i></button>
+        <button class="button button-wine booking-next" data-next="3" disabled><span data-i18n="continue">Continue</span><i data-lucide="arrow-right"></i></button>
       </div>
       <div class="booking-step" data-step="3">
         <span class="step-count">03 / 03</span>
@@ -312,7 +345,7 @@
           <span>CALENDLY</span>
           <strong data-i18n="calendarSoon">Scheduling connection ready to add</strong>
         </div>
-        <button class="line-link dialog-close-link"><span data-i18n="closePreview">Close preview</span><i>×</i></button>
+        <button class="line-link dialog-close-link"><span data-i18n="closePreview">Close preview</span><i data-lucide="x"></i></button>
       </div>
     </dialog>
 

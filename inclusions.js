@@ -55,7 +55,7 @@ const translations = {
     closingTitle: "La belleza comienza con lo que vemos.<br><em>Comprender exige mirar más profundo.</em>",
     closingBody: "La elección correcta de claridad no siempre es el grado más raro. Es la que equilibra belleza, confianza y valor para ti.",
     meetGuillermo: "Conoce a Guillermo",
-    allStories: "Todas las historias →"
+    allStories: "Todas las historias"
   }
 };
 
@@ -125,7 +125,7 @@ function syncVideoControls() {
   const duration = video.duration || 99;
   videoProgress.style.width = `${duration ? (video.currentTime / duration) * 100 : 0}%`;
   videoTime.textContent = `${formatTime(video.currentTime)} / ${formatTime(duration)}`;
-  controlPlay.textContent = video.paused ? "▶" : "Ⅱ";
+  window.indabaIcon(controlPlay, video.paused ? "play" : "pause");
   videoFrame.classList.toggle("playing", !video.paused);
 }
 
@@ -145,7 +145,8 @@ video.addEventListener("ended", syncVideoControls);
 
 soundButton.addEventListener("click", () => {
   video.muted = !video.muted;
-  soundButton.textContent = video.muted ? "Muted" : "Sound";
+  window.indabaIcon(soundButton, video.muted ? "volume-x" : "volume-2");
+  soundButton.setAttribute("aria-label", video.muted ? "Unmute video" : "Mute video");
 });
 
 setLanguage(language);

@@ -22,7 +22,7 @@ const translations = {
     nextLabel: "La colección está creciendo",
     nextBody: "Añadiremos nuevos videos y notas de campo, una historia a la vez.",
     ask: "Hazle una pregunta a Guillermo",
-    backTop: "Volver arriba ↑"
+    backTop: "Volver arriba"
   }
 };
 

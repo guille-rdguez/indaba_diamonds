@@ -29,7 +29,7 @@ const translations = {
     closingTitle: "La belleza atrae la mirada.<br><em>La precisión la sostiene.</em>",
     closingBody: "Un certificado ofrece información importante. Saber mirar revela el resto.",
     meetGuillermo: "Conoce a Guillermo",
-    backTop: "Volver arriba ↑"
+    backTop: "Volver arriba"
   }
 };
 
@@ -103,7 +103,7 @@ function syncVideoControls() {
   const played = duration ? (video.currentTime / duration) * 100 : 0;
   videoProgress.style.width = `${played}%`;
   videoTime.textContent = `${formatTime(video.currentTime)} / ${formatTime(duration)}`;
-  controlPlay.textContent = video.paused ? "▶" : "Ⅱ";
+  window.indabaIcon(controlPlay, video.paused ? "play" : "pause");
   videoFrame.classList.toggle("playing", !video.paused);
 }
 
@@ -123,7 +123,8 @@ video.addEventListener("ended", syncVideoControls);
 
 soundButton.addEventListener("click", () => {
   video.muted = !video.muted;
-  soundButton.textContent = video.muted ? "Muted" : "Sound";
+  window.indabaIcon(soundButton, video.muted ? "volume-x" : "volume-2");
+  soundButton.setAttribute("aria-label", video.muted ? "Unmute video" : "Mute video");
 });
 
 setLanguage(language);

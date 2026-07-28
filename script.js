@@ -70,7 +70,7 @@ const translations = {
     journalChapter: "La revista Indaba", journalEyebrow: "Historias que merecen mirarse de cerca", journalTitle: "Un poco de conocimiento<br><em>cambia lo que ves.</em>",
     journalIntro: "Videos breves, respuestas honestas y detalles desde el banco de joyero, creados para disfrutarse en lo que terminas un buen café.",
     journalAll: "Todas las historias", journalDiamonds: "Diamantes", journalCraft: "En el banco", journalGuidance: "Guillermo explica", journalStories: "Amor e historias",
-    journalWatch: "Ver", journalFilm: "Video breve", journalOpen: "Ver historia ↗", journalCraftTitle: "Del boceto a para siempre: así se crea un anillo",
+    journalWatch: "Ver", journalFilm: "Video breve", journalOpen: "Ver historia", journalCraftTitle: "Del boceto a para siempre: así se crea un anillo",
     journalCraftDeck: "Las pequeñas y precisas decisiones que convierten una idea en algo hecho para trascendernos.",
     journalCloseLook: "Una mirada de cerca", journalDiamondTitle: "Por qué un diamante se mueve distinto en la vida real", journalDiamondDeck: "El certificado describe la piedra. La luz revela su personalidad.",
     journalTwoMinute: "Respuesta en dos minutos", journalClarityQuote: "“El mejor grado de claridad no siempre es la mejor decisión.”", journalClarityTitle: "El grado de claridad por el que sí vale la pena pagar",
@@ -182,8 +182,17 @@ function refreshInteractiveCopy() {
 
 document.querySelectorAll(".video-toggle").forEach(button => button.addEventListener("click", () => {
   const video = button.parentElement.querySelector("video");
-  if (video.paused) { video.play(); button.classList.add("playing"); }
-  else { video.pause(); button.classList.remove("playing"); }
+  if (video.paused) {
+    video.play();
+    button.classList.add("playing");
+    window.indabaIcon(button, "pause");
+    button.setAttribute("aria-label", "Pause video");
+  } else {
+    video.pause();
+    button.classList.remove("playing");
+    window.indabaIcon(button, "play");
+    button.setAttribute("aria-label", "Play video");
+  }
 }));
 
 const dialog = document.querySelector(".booking-dialog");
