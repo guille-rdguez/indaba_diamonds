@@ -21,7 +21,7 @@
     <title>Indaba Diamonds — Every love story begins with a conversation</title>
     <link rel="preload" href="assets/images/diamond-editorial.webp" as="image" type="image/webp" fetchpriority="high" />
     <link rel="preload" href="assets/fonts/italiana-latin-400.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="styles.min.css" />
+    <link rel="stylesheet" href="styles.min.css?v=20260730-4" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -127,7 +127,7 @@
         <div class="chapter-label light"><span>01</span><span data-i18n="chapterGuide">Your guide</span></div>
         <div class="meet-layout">
           <div class="portrait-wrap reveal">
-            <img src="guillermo_equipo.webp" alt="Guillermo González visiting a jewelry workshop" loading="lazy" decoding="async" width="900" height="1200" />
+            <img src="assets/images/guillermo-workshop-portrait.webp" alt="Guillermo González smiling in his jewelry workshop" loading="lazy" decoding="async" width="1152" height="1536" />
             <div class="portrait-caption"><span>Guillermo González</span><small data-i18n="portraitRole">Gemologist · Jeweler · Diamond specialist</small></div>
           </div>
           <div class="meet-copy">
@@ -180,32 +180,34 @@
         </div>
       </section>
 
-      <section class="craft section">
+      <section class="craft section" id="craft">
         <div class="chapter-label light"><span>03</span><span data-i18n="chapterCraft">From idea to heirloom</span></div>
         <div class="craft-heading">
           <h2 class="reveal" data-i18n="craftTitle">Not selected from a case.<br /><em>Created through a conversation.</em></h2>
           <p class="reveal" data-i18n="craftBody">Bring a sketch, a saved image, an inherited piece—or nothing but an idea. Together, we shape it into something entirely yours.</p>
         </div>
         <div class="media-story">
-          <figure class="media-card media-tall reveal">
-            <video src="proceso.mp4" poster="assets/images/journal/proceso-poster.webp" muted loop playsinline preload="none"></video>
-            <button class="video-toggle" aria-label="Play process video"><i data-lucide="play"></i></button>
-            <figcaption><span data-i18n="mediaMaking">At the bench</span><small data-i18n="mediaMakingSub">The human hand behind every detail</small></figcaption>
-          </figure>
-          <figure class="media-card reveal">
+          <figure class="media-card media-feature reveal">
             <video src="video_render.mp4" poster="assets/images/journal/render-poster.webp" muted loop playsinline preload="none"></video>
             <button class="video-toggle" aria-label="Play ring render video"><i data-lucide="play"></i></button>
             <figcaption><span data-i18n="mediaVision">The vision</span><small data-i18n="mediaVisionSub">See it before it becomes real</small></figcaption>
           </figure>
-          <figure class="media-card reveal">
-            <img src="anillo.webp" alt="Radiant-cut diamond engagement ring" loading="lazy" decoding="async" width="1536" height="809" />
-            <figcaption><span data-i18n="mediaDiamond">The diamond</span><small data-i18n="mediaDiamondSub">Chosen for more than its numbers</small></figcaption>
-          </figure>
-          <figure class="media-card media-wide reveal">
-            <video src="viedo_anillos.mp4" poster="assets/images/journal/anillos-poster.webp" muted loop playsinline preload="none"></video>
-            <button class="video-toggle" aria-label="Play finished ring video"><i data-lucide="play"></i></button>
-            <figcaption><span data-i18n="mediaOne">The one</span><small data-i18n="mediaOneSub">Made for the story only you can tell</small></figcaption>
-          </figure>
+          <div class="media-stack">
+            <figure class="media-card media-process reveal">
+              <video src="proceso.mp4" poster="assets/images/journal/proceso-poster.webp" muted loop playsinline preload="none"></video>
+              <button class="video-toggle" aria-label="Play process video"><i data-lucide="play"></i></button>
+              <figcaption><span data-i18n="mediaMaking">At the bench</span><small data-i18n="mediaMakingSub">The human hand behind every detail</small></figcaption>
+            </figure>
+            <figure class="media-card media-diamond reveal">
+              <img src="anillo.webp" alt="Radiant-cut diamond engagement ring" loading="lazy" decoding="async" width="1536" height="809" />
+              <figcaption><span data-i18n="mediaDiamond">The diamond</span><small data-i18n="mediaDiamondSub">Chosen for more than its numbers</small></figcaption>
+            </figure>
+            <figure class="media-card media-finished reveal">
+              <video src="viedo_anillos.mp4" poster="assets/images/journal/anillos-poster.webp" muted loop playsinline preload="none"></video>
+              <button class="video-toggle" aria-label="Play finished ring video"><i data-lucide="play"></i></button>
+              <figcaption><span data-i18n="mediaOne">The one</span><small data-i18n="mediaOneSub">Made for the story only you can tell</small></figcaption>
+            </figure>
+          </div>
         </div>
         <div class="craft-cta reveal">
           <div><span data-i18n="craftCtaLabel">Have an idea—or no idea where to begin?</span><strong data-i18n="craftCtaTitle">Bring the story. Guillermo will help shape the rest.</strong></div>
@@ -297,8 +299,8 @@
         </div>
       </section>
 
-      <section class="final-cta section">
-        <div class="final-symbol" aria-hidden="true"><i></i><b></b></div>
+      <section class="final-cta section" id="conversation">
+        <div class="final-symbol" aria-hidden="true"></div>
         <p class="eyebrow reveal" data-i18n="finalEyebrow">Complimentary · Personal · No pressure</p>
         <h2 class="reveal" data-i18n="finalTitle">Every love story begins<br /><em>with a conversation.</em></h2>
         <p class="reveal" data-i18n="finalBody">Your first video consultation is directly with Guillermo, in English or Spanish.</p>
