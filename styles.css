@@ -510,7 +510,8 @@ footer > p {
   .diamond-selector button span { font-size: 27px; }
   .diamond-selector button small { max-width: 145px; text-align: right; }
   .media-story { grid-template-columns: 1fr; }
-  .media-feature { grid-column: auto; aspect-ratio: 4/3; }
+  .media-feature { display: block; width: 100%; grid-column: auto; aspect-ratio: 16/9; }
+  .media-feature video { object-fit: cover; }
   .media-stack { display: grid; grid-column: auto; gap: 16px; }
   .media-process, .media-diamond, .media-finished { grid-column: auto; grid-row: auto; height: auto; }
   .media-process { aspect-ratio: 480/848; }
