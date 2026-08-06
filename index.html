@@ -21,7 +21,7 @@
     <title>Indaba Diamonds — Every love story begins with a conversation</title>
     <link rel="preload" href="assets/images/diamond-editorial.webp" as="image" type="image/webp" fetchpriority="high" />
     <link rel="preload" href="assets/fonts/italiana-latin-400.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="styles.min.css?v=20260730-4" />
+    <link rel="stylesheet" href="styles.css?v=20260806-1" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -188,9 +188,9 @@
         </div>
         <div class="media-story">
           <figure class="media-card media-feature reveal">
-            <video src="video_render.mp4" poster="assets/images/journal/render-poster.webp" muted loop playsinline preload="none"></video>
-            <button class="video-toggle" aria-label="Play ring render video"><i data-lucide="play"></i></button>
-            <figcaption><span data-i18n="mediaVision">The vision</span><small data-i18n="mediaVisionSub">See it before it becomes real</small></figcaption>
+            <video src="assets/videos/branded-arrows-showcase.mp4" poster="assets/images/designs/branded-arrows-poster.webp" muted loop playsinline preload="metadata" data-autoplay></video>
+            <button class="video-toggle" aria-label="Pause custom ring showcase"><i data-lucide="pause"></i></button>
+            <figcaption><span data-i18n="mediaVision">One idea. Many possibilities.</span><small data-i18n="mediaVisionSub">Custom proportions, stones and details—considered from every angle</small></figcaption>
           </figure>
           <div class="media-stack">
             <figure class="media-card media-process reveal">
@@ -199,13 +199,12 @@
               <figcaption><span data-i18n="mediaMaking">At the bench</span><small data-i18n="mediaMakingSub">The human hand behind every detail</small></figcaption>
             </figure>
             <figure class="media-card media-diamond reveal">
-              <img src="anillo.webp" alt="Radiant-cut diamond engagement ring" loading="lazy" decoding="async" width="1536" height="809" />
-              <figcaption><span data-i18n="mediaDiamond">The diamond</span><small data-i18n="mediaDiamondSub">Chosen for more than its numbers</small></figcaption>
+              <img src="assets/images/designs/marquise-white.webp" alt="Custom ring with a marquise-cut white diamond" loading="lazy" decoding="async" width="1062" height="971" />
+              <figcaption><span data-i18n="mediaDiamond">A classic, redrawn</span><small data-i18n="mediaDiamondSub">A marquise silhouette made entirely personal</small></figcaption>
             </figure>
             <figure class="media-card media-finished reveal">
-              <video src="viedo_anillos.mp4" poster="assets/images/journal/anillos-poster.webp" muted loop playsinline preload="none"></video>
-              <button class="video-toggle" aria-label="Play finished ring video"><i data-lucide="play"></i></button>
-              <figcaption><span data-i18n="mediaOne">The one</span><small data-i18n="mediaOneSub">Made for the story only you can tell</small></figcaption>
+              <img src="assets/images/designs/oval-sapphire.webp" alt="Custom yellow-gold ring with a deep blue oval sapphire" loading="lazy" decoding="async" width="1062" height="971" />
+              <figcaption><span data-i18n="mediaOne">Colour, considered</span><small data-i18n="mediaOneSub">A distinctive stone for a story with its own character</small></figcaption>
             </figure>
           </div>
         </div>
@@ -263,6 +262,28 @@
           <h2 class="reveal" data-i18n="purposeTitle">Opening the door<br /><em>he once found closed.</em></h2>
           <p class="reveal" data-i18n="purposeBody">Part of Indaba's future profits will help equip a jewelry school in Mexico and create scholarships for people who could not otherwise learn the craft. Every ring helps move that dream forward.</p>
           <p class="purpose-note reveal" data-i18n="purposeNote">The program and its public impact reporting are currently being developed.</p>
+        </div>
+      </section>
+
+      <section class="journal-spotlight section" id="journal-film" aria-labelledby="spotlight-title">
+        <div class="chapter-label light"><span>FILM / 01</span><span data-i18n="spotlightChapter">From The Indaba Journal</span></div>
+        <div class="spotlight-layout">
+          <div class="spotlight-copy">
+            <p class="eyebrow reveal" data-i18n="spotlightEyebrow">Look beyond the first sparkle</p>
+            <h2 class="reveal" id="spotlight-title" data-i18n="spotlightTitle">Precision you can<br /><em>see for yourself.</em></h2>
+            <p class="spotlight-deck reveal" data-i18n="spotlightDeck">Hearts &amp; Arrows is the hidden geometry created by an exceptional round cut. Guillermo shows how a specialized viewer makes that precision visible.</p>
+            <div class="spotlight-facts reveal" aria-label="Hearts and Arrows facts">
+              <span><b>08</b><small data-i18n="spotlightArrows">arrows above</small></span>
+              <span><b>08</b><small data-i18n="spotlightHearts">hearts below</small></span>
+              <span><b>00:41</b><small data-i18n="spotlightLength">short film</small></span>
+            </div>
+            <a class="line-link reveal" href="hearts-and-arrows.html"><span data-i18n="spotlightRead">Explore the full story</span><i data-lucide="arrow-up-right"></i></a>
+          </div>
+          <div class="spotlight-media reveal">
+            <video src="hearstandarrows.mp4" poster="assets/images/journal/hearts-and-arrows-poster.webp" muted loop playsinline preload="metadata" data-autoplay></video>
+            <button class="video-toggle spotlight-toggle" aria-label="Pause Hearts and Arrows film"><i data-lucide="pause"></i></button>
+            <div class="spotlight-caption"><span>HEARTS &amp; ARROWS</span><small data-i18n="spotlightCaption">Precision inspection · with Guillermo</small></div>
+          </div>
         </div>
       </section>
 

@@ -9,6 +9,7 @@ const conversionOrder = [
   ".credentials",
   ".story",
   ".purpose",
+  ".journal-spotlight",
   ".faq",
   ".final-cta"
 ];
@@ -49,8 +50,8 @@ const translations = {
     diamondLab: "Un diamante de laboratorio comparte las propiedades esenciales de uno natural y puede ofrecer otras posibilidades de tamaño y diseño. Guillermo te explicará las diferencias con total transparencia.",
     chapterCraft: "De una idea a una pieza para siempre", craftTitle: "No elegido de una vitrina.<br><em>Creado mediante una conversación.</em>",
     craftBody: "Trae un boceto, una imagen guardada, una pieza heredada o sólo una idea. Juntos, la convertimos en algo completamente tuyo.",
-    mediaMaking: "En el banco", mediaMakingSub: "La mano humana detrás de cada detalle", mediaVision: "La visión", mediaVisionSub: "Mírala antes de hacerla realidad",
-    mediaDiamond: "El diamante", mediaDiamondSub: "Elegido por más que sus números", mediaOne: "El indicado", mediaOneSub: "Creado para la historia que sólo ustedes pueden contar",
+    mediaMaking: "En el banco", mediaMakingSub: "La mano humana detrás de cada detalle", mediaVision: "Una idea. Muchas posibilidades.", mediaVisionSub: "Proporciones, piedras y detalles personalizados, vistos desde todos los ángulos",
+    mediaDiamond: "Un clásico, reinterpretado", mediaDiamondSub: "Una silueta marquise convertida en algo completamente personal", mediaOne: "Color, con intención", mediaOneSub: "Una piedra distintiva para una historia con carácter propio",
     craftCtaLabel: "¿Tienes una idea o no sabes por dónde comenzar?", craftCtaTitle: "Trae la historia. Guillermo te ayudará a dar forma al resto.",
     chapterStory: "Una vida entre diamantes", storyTitle: "Algunas carreras se planean.<br><em>Ésta se persiguió.</em>",
     archiveEyebrow: "Los años de aprendizaje · 1985—1986", archiveTitle: "Antes de las credenciales,<br><em>estuvo el banco de trabajo.</em>",
@@ -67,6 +68,9 @@ const translations = {
     purposeEyebrow: "Una compra con propósito", purposeTitle: "Abrir la puerta<br><em>que alguna vez encontró cerrada.</em>",
     purposeBody: "Parte de las futuras ganancias de Indaba ayudará a equipar una escuela de joyería en México y crear becas para quienes de otra manera no podrían aprender el oficio. Cada anillo ayudará a acercar ese sueño.",
     purposeNote: "El programa y su reporte público de impacto se encuentran actualmente en desarrollo.",
+    spotlightChapter: "Desde The Indaba Journal", spotlightEyebrow: "Mira más allá del primer destello", spotlightTitle: "Precisión que puedes<br><em>ver por ti mismo.</em>",
+    spotlightDeck: "Hearts & Arrows es la geometría oculta que nace de un corte redondo excepcional. Guillermo muestra cómo un visor especializado hace visible esa precisión.",
+    spotlightArrows: "flechas arriba", spotlightHearts: "corazones abajo", spotlightLength: "video breve", spotlightRead: "Descubre la historia completa", spotlightCaption: "Inspección de precisión · con Guillermo",
     journalChapter: "La revista Indaba", journalEyebrow: "Historias que merecen mirarse de cerca", journalTitle: "Un poco de conocimiento<br><em>cambia lo que ves.</em>",
     journalIntro: "Videos breves, respuestas honestas y detalles desde el banco de joyero, creados para disfrutarse en lo que terminas un buen café.",
     journalAll: "Todas las historias", journalDiamonds: "Diamantes", journalCraft: "En el banco", journalGuidance: "Guillermo explica", journalStories: "Amor e historias",
@@ -180,20 +184,42 @@ function refreshInteractiveCopy() {
   document.querySelector("#diamond-answer").textContent = diamondCopy[currentDiamond][language];
 }
 
+function syncVideoButton(button, playing) {
+  button.classList.toggle("playing", playing);
+  window.indabaIcon(button, playing ? "pause" : "play");
+  button.setAttribute("aria-label", `${playing ? "Pause" : "Play"} video`);
+}
+
 document.querySelectorAll(".video-toggle").forEach(button => button.addEventListener("click", () => {
   const video = button.parentElement.querySelector("video");
   if (video.paused) {
+    video.dataset.userPaused = "false";
     video.play();
-    button.classList.add("playing");
-    window.indabaIcon(button, "pause");
-    button.setAttribute("aria-label", "Pause video");
+    syncVideoButton(button, true);
   } else {
+    video.dataset.userPaused = "true";
     video.pause();
-    button.classList.remove("playing");
-    window.indabaIcon(button, "play");
-    button.setAttribute("aria-label", "Play video");
+    syncVideoButton(button, false);
   }
 }));
+
+const motionReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const autoplayVideos = document.querySelectorAll("video[data-autoplay]");
+if (!motionReduced && "IntersectionObserver" in window) {
+  const videoObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+    const video = entry.target;
+    const button = video.parentElement.querySelector(".video-toggle");
+    if (entry.isIntersecting && video.dataset.userPaused !== "true") {
+      video.play().then(() => syncVideoButton(button, true)).catch(() => syncVideoButton(button, false));
+    } else if (!entry.isIntersecting) {
+      video.pause();
+      syncVideoButton(button, false);
+    }
+  }), { threshold: .45 });
+  autoplayVideos.forEach(video => videoObserver.observe(video));
+} else {
+  autoplayVideos.forEach(video => syncVideoButton(video.parentElement.querySelector(".video-toggle"), false));
+}
 
 const dialog = document.querySelector(".booking-dialog");
 document.querySelectorAll(".open-booking").forEach(button => button.addEventListener("click", () => {
